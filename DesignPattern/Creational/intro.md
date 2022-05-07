@@ -16,7 +16,7 @@
 
 ## Content
 ---------------
-[팩토리 패턴]('/DesignPattern/Creational/Factory.md')
+[팩토리 패턴]("/DesignPattern/Creational/factory.md")
 
-[싱글턴 패턴과 공유상태]('/DesignPattern/creational/factory.md')
+[싱글턴 패턴과 공유상태]()
 
