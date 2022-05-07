@@ -29,25 +29,39 @@ C언어와 같은 언어에서는 함수는 객체가 아니다. 때문에 동�
 
 그럼 인터페이스에서 객체를 만들 때 C같은 프로그래밍 언어면 다음과 같이 아래와 같은 식의 코드가 필요할 수도 있다. 
 
-    def operation_factory(name='add'):
-        if name =='add':
-            operator = Add()
-        elif name =='mul':
-            operator = Mul()
-        elif name =='div':
-            operator = Div()
-        elif name =='sub':
-            operator = Sub()
-        return operator 
+    class Operator():
+        def __init__(self,name):
+            self._operation = self.operation_factory(name)
+        
+        def __call__(or1,or2):
+            return self._operation(or1,or2)
+
+        @staticmethod
+        def operation_factory(name='add'):
+            if name =='add':
+                operator = Add()
+            elif name =='mul':
+                operator = Mul()
+            elif name =='div':
+                operator = Div()
+            elif name =='sub':
+                operator = Sub()
+            return operator 
 
 이런 방식은 **새로운 구상 클래스(여기서는 각 연산 클래스)가 추가되면 인터페이스 코드를 고쳐야 한다.**
 
 코드 재활용 및 변화의 영향에 대한 코드 수정을 최소화 하기 위해서 팩토리 방식은 바뀔 수 있는 부분(각 구상 클래스에 특화된 기능 등)과 바뀌지 않는(상속 가능한) 부분을 분리시켜야 한다는 원칙이 존재한다. 그 **바뀌는 부분을 팩토리로 생성한다는 것.**
 
 
+그런데 파이썬에서는 그냥 아래와 같이 하면 된다.
 
-
-
+    
+    class Operator():
+        def __init__(self,CLSNAME):
+            self._operation = CLSNAME()
+        
+        def __call__(or1,or2):
+            return self._operation(or1,or2)
 
 
 
