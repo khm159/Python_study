@@ -16,7 +16,7 @@
 
 ## Content
 ---------------
-- [팩토리 패턴]("https://github.com/khm159/Python_study/blob/main/DesignPattern/Creational/Factory.md")
+- [팩토리 패턴]("/DesignPattern/Creational/Factory.md")
 
 - [싱글턴 패턴과 공유상태]()
 
