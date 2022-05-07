@@ -63,7 +63,7 @@ C언어와 같은 언어에서는 함수는 객체가 아니다. 때문에 동�
         def __call__(or1,or2):
             return self._operation(or1,or2)
 
-
+**별도의 팩토리가 필요없다.**
 
 
 
