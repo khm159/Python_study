@@ -8,12 +8,12 @@
 
 - **디자인 패턴**
   - [생성 패턴](DesignPattern/Creational/intro.md)
-  - [구조 패턴]()
+  - 구조 패턴
 - **알고리즘**
   - 탐색
-    - [DFS]()
-    - [BFS]()
-    - [이진탐색]()
+    - [DFS](ProblemSolving/DFS/DFS.md)
+    - BFS
+    - 이진탐색
   - 정렬
   - 다이나믹 프로그래밍
   - 최단경로
