@@ -2,6 +2,8 @@
 
 Depth-Fisrt Search(DFS)는 깊이 우선 탐색이라고도 불리며 그래프에서 깊은 부분을 우선적으로 탐색한다. 
 
+연삭 복잡도는 **O(N)** 이다.
+
 ## Content
 
 - [Graph 구현법](#Graph)
@@ -10,6 +12,8 @@ Depth-Fisrt Search(DFS)는 깊이 우선 탐색이라고도 불리며 그래프�
   - [구현별 장/단점](#구현-별-장단점)
 - [DFS 란?](#DFS)
   - [DFS 진행과정](#dfs-진행-과정)
+  - [DFS 구현(Adjacency Matrix)]
+  - [DFS 구현(Adjacency List)]
 
 ## Graph
 
@@ -303,6 +307,57 @@ DFS 는 깊이 우선 탐색 알고리즘으로 깊이를 우선시 하여 탐�
 <0> (**현재 스택의 최상단 요소 조회** --> 없음)
 
 <1> 재귀 탈출
+
+
+노드 탐색 순서는 1-> 2-> 7-> 6 -> 8-> 3-> 4-> 5 가 된다. **(스택에 들어간 순서)**
+
+탐색 경로 획득은 스택에 들어간 순서를 기록하면 된다. 
+
+연산 복잡도는 **O(N)** 이다. 
+
+
+- #### DFS 구현 (Adjacency Matrix)
+
+갱신 되는 것은 방문 목록 list 뿐. 
+
+방문 목록 list가 모두 True 가 되면 재귀 탈출됨. 
+
+```python
+
+def dfs(graph, v, visited):
+    """ DFS함수, 탐색 경로를 print.
+    args:
+        graph (list)  : 2차원 리스트, adjacency list.
+        v (int)       : 현재 탐색 중인 노드 (스택 최상단 요소)
+        visited (list): 방문 목록 
+    return: None
+    """
+    visited[v] = True  # 방문 기록 
+    print(v, end=' ')  # 탐색 경로 print
+    for i in graph[v]: # 현재 노드 연결된 노드들 조회 
+        if not visited[i]: # 방문 하지 않은 노드가 있을 때 재귀호출
+            dfs(graph, i, visited) 
+
+graph = [
+    [], # 0번 노드 없음
+    [2, 3, 8], # 이 예제 에서는 단순 연결 상태만 정의 (비용x)
+    [1, 7],
+    [1, 4, 5],
+    [3, 5],
+    [3, 4],
+    [7],
+    [2, 6, 8],
+    [1, 7]
+]
+
+visited = [False]*len(graph)
+
+dfs(graph, 1, visited)
+
+```
+
+---------------------------
+참고 : [나동빈, "이것이 취업을 위한 코딩 테스트다 with 파이썬 ", 한빛 미디어, pp.124-143](http://www.yes24.com/Product/Goods/91433923)
 
 
 
