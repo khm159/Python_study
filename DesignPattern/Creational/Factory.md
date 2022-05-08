@@ -30,7 +30,7 @@ C언어와 같은 언어에서는 함수는 객체가 아니다. 때문에 동�
 그럼 인터페이스에서 객체를 만들 때 C같은 프로그래밍 언어면 다음과 같이 아래와 같은 식의 코드가 필요할 수도 있다. 
 
 #### 3. 파이썬에서의 팩토리 패턴 
-
+    ```python
     class Operator():
         def __init__(self,name):
             self._operation = self.operation_factory(name)
@@ -49,6 +49,7 @@ C언어와 같은 언어에서는 함수는 객체가 아니다. 때문에 동�
             elif name =='sub':
                 operator = Sub()
             return operator 
+    ```
 
 이런 방식은 **새로운 구상 클래스(여기서는 각 연산 클래스)가 추가되면 인터페이스 코드를 고쳐야 한다.**
 
