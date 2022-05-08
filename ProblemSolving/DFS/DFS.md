@@ -32,9 +32,9 @@ graph = [
 |Adjacency Matrix| | |
 |------|---|---|
 | |**0**|**1**|**2**|
-|**0**|0|7|5|
-|**1**|7|0|INF|
-|**2**|5|INF|0|
+|**0**|    0    |    7    |    5    |
+|**1**|    7    |    0    |   INF   |
+|**2**|    5    |   INF   |    0    |
 
 그리고 당연히 Adjacency Matrix는 Sysymmetric Matrix가 된다. 
 
