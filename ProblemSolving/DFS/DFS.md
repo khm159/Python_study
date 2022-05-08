@@ -103,7 +103,7 @@ DFS 는 깊이 우선 탐색 알고리즘으로 깊이를 우선시 하여 탐�
 
 **진행 과정**
 
-![dfs1]('https://github.com/khm159/Python_study/tree/main/ProblemSolving/DFS/images/dfs01.png')
+![dfs1]('https://github.com/khm159/Python_study/blob/main/ProblemSolving/DFS/images/dfs01.png')
 
 다음과 같은 노드가 존재할 때 1번 노드에서 탐색을 시작한다고 하자.
 
