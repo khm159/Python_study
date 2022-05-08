@@ -27,15 +27,15 @@ graph = [
     [7, 0, INF],
     [5, INF, 0]
 ]
+```
 
-|Adjacency Matrix|
+|Adjacency Matrix|||
 | |**0**|**1**|**2**|
 |**0**|0|7|5|
 |**1**|7|0|INF|
 |**2**|5|INF|0|
 
-```
-    그리고 당연히 Adjacency Matrix는 Sysymmetric Matrix가 된다. 
+그리고 당연히 Adjacency Matrix는 Sysymmetric Matrix가 된다. 
 
 
 - 인접 리스트(Adjacency List)
@@ -61,8 +61,7 @@ graph[1].append((0, 7))
 # 2번 노드에 연결 정보 저장 (노드, 거리)
 graph[2].append((0, 5))
 ```
-
-|Adjacency Matrix|
+|Adjacency Matrix|||
 | |**0**|**1**|**2**|
 |**0**|0|7|5|
 |**1**|7|0|INF|
