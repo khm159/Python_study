@@ -12,8 +12,7 @@ Depth-Fisrt Search(DFS)는 깊이 우선 탐색이라고도 불리며 그래프�
   - [구현별 장/단점](#구현-별-장단점)
 - [DFS 란?](#DFS)
   - [DFS 진행과정](#dfs-진행-과정)
-  - [DFS 구현(Adjacency Matrix)]
-  - [DFS 구현(Adjacency List)]
+  - [DFS 구현](#dfs-구현)
 
 ## Graph
 
@@ -316,7 +315,7 @@ DFS 는 깊이 우선 탐색 알고리즘으로 깊이를 우선시 하여 탐�
 연산 복잡도는 **O(N)** 이다. 
 
 
-- #### DFS 구현 (Adjacency Matrix)
+- #### DFS 구현
 
 갱신 되는 것은 방문 목록 list 뿐. 
 
