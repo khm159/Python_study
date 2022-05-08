@@ -5,13 +5,17 @@ Depth-Fisrt Search(DFS)는 깊이 우선 탐색이라고도 불리며 그래프�
 ## Content
 
 - [Graph 구현법](#Graph)
+  - [인접 행렬(Adjacency Matrix) 방식](#인접-행렬adjacency-matrix-방식)
+  - [인접 리스트(Adjacency List) 방식](#인접-리스트adjacency-list)
+  - [구현별 장/단점](#구현-별-장단점)
 - [DFS 란?](#DFS)
+  - [DFS 진행과정](#dfs-진행-과정)
 
 ## Graph
 
 그래프는 크게 가지 방법으로 구현된다. 
 
-- 인접 행렬(Adjacency Matrix) 방식
+- #### 인접 행렬(Adjacency Matrix) 방식
 
     2차원 배열로 그래프의 연결 관계를 표현
 
@@ -38,7 +42,7 @@ graph = [
 그리고 당연히 Adjacency Matrix는 Sysymmetric Matrix가 된다. 
 
 
-- 인접 리스트(Adjacency List)
+- #### 인접 리스트(Adjacency List)
 
     리스트로 그래프의 연결 관계를 표현
 
@@ -68,7 +72,7 @@ graph[2].append((0, 5))
 |**2**|5|INF|0|
 
 
-구현 별 장/단점
+- #### 구현 별 장/단점
 
 1. Matrix 방식 
 
@@ -99,9 +103,7 @@ DFS 는 깊이 우선 탐색 알고리즘으로 깊이를 우선시 하여 탐�
 
 스택을 쓰는 이유는 **현재 위치와 한 경로로 끝까지 간 뒤에 돌아갈 지점을 기억하기 위해서이다.** (이것은 함수 call 및 return 할때의 구조와 비슷하다고 보면 됨.)
 
-
-
-**진행 과정**
+- #### DFS 진행 과정
 
 **방문 처리된 노드**는 회색, **현재 처리하는 노드의 최상단 노드**는 파란색으로 표현
 
